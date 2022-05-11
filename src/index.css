@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding-top: 20px;
+  background-attachment: fixed;
+  background-image: url(/src/assets/Fondo2.jpg);
+}
+
+.menu{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  list-style: none;
+  background: #092327;
+}
+
+.menu .lista-menu a{
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  display: block;
+}
+
+.menu li{
+  display: inline-block;
+  text-align: center;
+}
+
+.menu li a:hover{
+  background: #ef8354;
+
+}
+
+.contenido-principal{
+  display: grid;
+  padding: 20px;
+  padding-bottom: 14%;
+  grid-template-columns: 50% 50%;
+  grid-template-rows:620px auto;
+  max-height: 50%;
+  margin: auto;
+  max-width: 90%;
+}
+
+.listas{
+  list-style: none;
+  padding: 10px;
+}
+
+.cont-listas{
+  padding: 10px;
+}
+
+.parrafo-li{
+  padding-bottom: 5px;
+}
+
+.btn{
+  font-family: sans-serif;
+  width: 60px;
+  color: azure;
+  background-color: crimson;
+  border: none;
+}
+
+.btn:hover{
+  background-color: black;
+}
+
+.formulario{
+  background-color:rgb(115, 205, 221);
+  padding: 20px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+  margin-right: 40px;
+  padding-bottom: 96%;
+  border-radius: 50px;
+}
+
+.objetos{
+  background-color:rgb(115, 205, 221);
+  padding: 20px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 40px;
+  padding-bottom: 21%;
+  border-radius: 50px;
+}
+
+.cajita{
+  margin: auto;
+  width: 95%;
+  height: 400px;
+  margin-top: 10px;
+  background-color: #c6e6eb;
+}
+
+.cajita2{
+  margin: auto;
+  width: 95%;
+  height: 400px;
+  margin-top: 10px;
+  background-color: #c6e6eb;
+}
+
+
+.titulo{
+  padding-top: 15px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 300%;
+  text-shadow: 3px 3px 3px rgb(141, 141, 141);
+}
