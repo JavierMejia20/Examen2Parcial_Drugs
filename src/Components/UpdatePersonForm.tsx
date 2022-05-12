@@ -2,11 +2,14 @@ import { ChangeEvent, MouseEvent, useState } from "react";
 import Medicina from "../Models/Medicina";
 import axios from "axios";
 
+
 export default function UpdatePersonForm() {
 
     const [id, setId] = useState('');
     const [name, setName] = useState('');
-    const [caducidad, setcaducidad] = useState('');
+    const [laboratory, setLaboratory] = useState('');
+    const [description, setDescription] = useState('');
+    const [image, setImage] = useState('');
 
     function handleIdChange(event: ChangeEvent<HTMLInputElement>) {
         const newValueForId = event.target.value;
@@ -18,15 +21,23 @@ export default function UpdatePersonForm() {
         setName(newValueForName);
     }
 
-    function handlecaducidadChange(event: ChangeEvent<HTMLInputElement>) {
-        const newValueForcaducidad = event.target.value;
-        setcaducidad(newValueForcaducidad);
+    function handleLaboratoryChange(event: ChangeEvent<HTMLInputElement>) {
+        const newValueForLaboratory = event.target.value;
+        setLaboratory(newValueForLaboratory);
+    }
+    function handleDescriptionChange(event: ChangeEvent<HTMLInputElement>) {
+        const newValueForDescription = event.target.value;
+        setDescription(newValueForDescription);
+    }
+    function handleImageChange(event: ChangeEvent<HTMLInputElement>) {
+        const newValueForImage = event.target.value;
+        setImage(newValueForImage);
     }
 
     async function handleUpdate(event: MouseEvent<HTMLButtonElement>){
         event.preventDefault();
 
-        const medicinaToUpdate = new Medicina(id, name, caducidad);
+        const medicinaToUpdate = new Medicina(id, name, laboratory, description, image);
 
         console.log('persona actualizada: ', medicinaToUpdate)
 
@@ -41,7 +52,7 @@ export default function UpdatePersonForm() {
     }
 
     async function UpdateMedicina(medicinaToUpdate: Medicina){
-        await axios.put('http://localhost:3001/medicina', medicinaToUpdate, {
+        await axios.put('http://localhost:3001/drugs/', medicinaToUpdate, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -50,7 +61,9 @@ export default function UpdatePersonForm() {
     function ClearForm(){
         setId('');
         setName('');
-        setcaducidad('');
+        setLaboratory('');
+        setDescription('');
+        setImage('');
     }
 
     return (
@@ -59,7 +72,11 @@ export default function UpdatePersonForm() {
             <br />
             <input type="text" placeholder="Name" value={name} onChange={handleNameChange} />
             <br />
-            <input type="text" placeholder="caducidad" value={caducidad} onChange={handlecaducidadChange} />
+            <input type="text" placeholder="Laboratorio" value={laboratory} onChange={handleLaboratoryChange} />
+            <br />
+            <input type="text" placeholder="Descripción" value={description} onChange={handleDescriptionChange} />
+            <br />
+            <input type="text" placeholder="Imagen" value={image} onChange={handleImageChange} />
             <br />
             <br />
             <button className="Boton" onClick={handleUpdate} >Update</button>

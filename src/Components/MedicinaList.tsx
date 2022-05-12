@@ -1,5 +1,4 @@
 import { useEffect, useState} from 'react';
-
 import Medicina from '../Models/Medicina';
 import GreetPerson from './NiceMedicina'
 import axios from 'axios';
@@ -10,9 +9,9 @@ export default function MedicinaList () {
     const [loaded, setLoaded] = useState<boolean>(false);
 
     async function loadmedicinas() {
-        const response = await axios.get('http://localhost:3001/medicinas');
+        const response = await axios.get('http://localhost:3001/drugs/');
         setmedicinas(
-          response.data.map((p: Medicina) => new Medicina(p.id, p.name, p.caducidad))
+          response.data.map((p: Medicina) => new Medicina(p.id, p.name, p.laboratory, p.description, p.image))
         );
         setLoaded(true);
     }
@@ -28,7 +27,9 @@ export default function MedicinaList () {
         <GreetPerson 
             key={p.id} 
             name={p.name} 
-            caducidad={p.caducidad}
+            laboratory={p.laboratory}
+            description={p.description} 
+            image={p.image} 
         />
         </div>
     ));
