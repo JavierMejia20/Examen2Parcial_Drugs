@@ -100,8 +100,10 @@ body {
   margin: auto;
   width: 95%;
   height: 400px;
+  padding-bottom: auto;
   margin-top: 10px;
   background-color: #c6e6eb;
+  text-align: center;
 }
 
 .cajita2{
@@ -117,6 +119,7 @@ body {
   padding-top: 15px;
   padding-bottom: 20px;
   text-align: center;
+  
   font-size: 300%;
   text-shadow: 3px 3px 3px rgb(141, 141, 141);
 }

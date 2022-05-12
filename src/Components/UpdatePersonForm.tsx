@@ -79,6 +79,7 @@ export default function UpdatePersonForm() {
             <input type="text" placeholder="Imagen" value={image} onChange={handleImageChange} />
             <br />
             <br />
+            <br />
             <button className="Boton" onClick={handleUpdate} >Update</button>
             <br />
         </form>

@@ -39,7 +39,9 @@ export default function MedicinaList () {
             <div className="objetos">
             <h1 className="titulo">Lista de medicinas</h1>
                 <div className="cajita">
+                <br />
                     {rendermedicinas()}
+                    <br />
                 </div>
             </div>
         </div>

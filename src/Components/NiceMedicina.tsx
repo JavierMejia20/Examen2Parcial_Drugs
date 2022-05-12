@@ -7,5 +7,12 @@ type GreetMedicinaProps = {
 }
 
 export default function Medicina(Props: GreetMedicinaProps){
-    return <p> Nombre: {Props.name}, Laboratorio: {Props.laboratory}, Descripción: {Props.description}, Imagen: {Props.image} </p>
+    return(
+        <div>
+            <br />
+            <p> Nombre: {Props.name}, Laboratorio: {Props.laboratory}, Descripción: {Props.description}, Imagen: {Props.image} </p>
+            
+        </div>
+    )
+    
 }
