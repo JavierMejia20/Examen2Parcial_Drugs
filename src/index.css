@@ -72,7 +72,7 @@ body {
 }
 
 .formulario{
-  background-color:rgb(115, 205, 221);
+  background-color:rgb(151, 255, 201);
   padding: 20px;
   margin: 10px;
   justify-content: center;
@@ -85,7 +85,7 @@ body {
 }
 
 .objetos{
-  background-color:rgb(115, 205, 221);
+  background-color:rgb(151, 255, 201);
   padding: 20px;
   margin: 10px;
   justify-content: center;
@@ -102,7 +102,7 @@ body {
   height: 400px;
   padding-bottom: auto;
   margin-top: 10px;
-  background-color: #c6e6eb;
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -111,7 +111,7 @@ body {
   width: 95%;
   height: 400px;
   margin-top: 10px;
-  background-color: #c6e6eb;
+  background-color: #ffffff;
 }
 
 
